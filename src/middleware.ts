@@ -38,5 +38,6 @@ export async function middleware(req: NextRequest) {
 
 // Export middleware configuration
 export const config = {
-  matcher: ["/api/v1/blogs/create","/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
+  // matcher: ["/api/v1/blogs/create","/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
+  matcher: ["https://dancing-faun-bf5242.netlify.app/api/v1/blogs/create", "/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
 };
