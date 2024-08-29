@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
       },
     });
     console.log(post);
-    return NextResponse.json(post, { status: 201 });
+    return NextResponse.json(post, { status: 200 });
   } catch (e) {
     console.log("error in createBlog controller", e);
     return NextResponse.json("Internal server error", { status: 501 });
