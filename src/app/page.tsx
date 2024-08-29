@@ -11,6 +11,10 @@ import useCanvasWallet from '@/app/components/CanvasWalletProvider';
 import { Button } from "@/components/ui/Button";
 import { PublicKey } from "@solana/web3.js";
 import Head from "next/head";
+import HomePage from "./home/page";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import LoginModal from "@/component/LoginModal";
 // import { CanvasClient } from "@dscvr-one/canvas-client-sdk";
 
 if (typeof window !== 'undefined') {
@@ -20,20 +24,25 @@ if (typeof window !== 'undefined') {
 export default function Home() {
   let { publicKey } = useWallet();
   const { connectWallet, walletAddress, iframe } = useCanvasWallet();
-  // if (walletAddress) {
-  //   const pubKey = new PublicKey(walletAddress)
-  //   publicKey = pubKey
-  // }
+
+ const signMethod = useSelector((store: RootState) => store.signMethod.value);
+ console.log("signMethod : ", signMethod);
 
   return (
-   
-      <>
-        {(publicKey || walletAddress) ?
+    < div className="w-screen h-[90vh]">
+      <HomePage />
+      {signMethod == "signin" && 
+        <div className="w-screen h-[90vh] fixed inset-0 backdrop-blur-md">
+          <LoginModal />
+        </div>
+      }
+      {/* {signMethod == "signup" && <SignupModal />} */}
+
+      {/* {(publicKey || walletAddress) ?
           (
             <>
               <Navbar />
               <CreateProposal />
-              {/* <Proposals /> */}
             </>
           ) : (
             <div className="flex items-center justify-center min-h-screen">
@@ -42,7 +51,7 @@ export default function Home() {
               </div>
             </div>
           )
-        }
-      </>
+        } */}
+    </div>
   );
 }
