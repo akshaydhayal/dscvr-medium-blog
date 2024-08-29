@@ -43,7 +43,7 @@ const BlogPage = ({params}:{params:{blogId:string}}) => {
   }
   return (
     <div className="w-screen h-auto bg-[#121212] flex justify-center">
-      <div className="w-3/5 h-full flex flex-col gap-12 py-12">
+      <div className="w-4/5 h-full flex flex-col gap-12 py-12">
         <div className="flex flex-col gap-6 ">
           <p className="text-4xl font-bold leading-[1.2] text-slate-100">{blog.title}</p>
           <p className="text-xl font-medium font-mono tracking-tighter leading-[1.2] text-slate-400">{blog.subtitle}</p>

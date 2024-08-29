@@ -85,7 +85,7 @@ const UpdateBlogPage = ({params}:{params:{blogId:string}}) => {
 
   return (
     <div className="w-screen h-auto min-h-[90vh] bg-[#121212] flex justify-center">
-      <div className="w-[70vw] flex flex-col gap-4 py-4">
+      <div className="w-[90vw] flex flex-col gap-4 py-4">
         <div className="flex justify-end">
             <button className="p-1 px-3 bg-[#1c7619] hover:bg-[#1a8917] text-slate-50 font-medium
              w-max rounded-3xl" onClick={()=>{

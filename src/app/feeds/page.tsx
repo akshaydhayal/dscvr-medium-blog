@@ -17,7 +17,7 @@ const FeedPage = () => {
   return (
     <div className='w-screen h-[90vh] bg-[#121212] flex justify-center'>
         {/* <div className="w-2/3 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden"> */}
-        <div className="w-4/5 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden">
+        <div className="w-11/12 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden">
             <div className="flex flex-col gap-4">
                 {blogs && blogs.map((blog,ind)=>{
                     return (
