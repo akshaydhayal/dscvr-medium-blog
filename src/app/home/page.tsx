@@ -30,7 +30,8 @@ const HomePage = () => {
           </div>
         </div>
         <div className="w-1/3 p-8 flex flex-col justify-center">
-          <img className="p-0 rounded-md" src="https://miro.medium.com/v2/resize:fit:1024/1*yBt65HhmARbqZDDJ1McFDg.png" loading="lazy" />
+          {/* <img className="p-0 rounded-md" src="https://miro.medium.com/v2/resize:fit:1024/1*yBt65HhmARbqZDDJ1McFDg.png" loading="lazy" /> */}
+          <img className="p-0 rounded-md" src="/landingPhoto.png" loading="lazy" />
         </div>
       </div>
       {/* {signMethod == "signin" && <LoginModal />} */}

@@ -107,7 +107,7 @@ const LoginModal = () => {
   return (
     <div className="fixed w-screen inset-0 backdrop-blur-md flex items-center justify-center">
       <div className="w-full rounded-lg shadow-lg p-6 px-12 flex justify-center">
-        <div className="w-1/3 bg-[#121212] border flex flex-col items-center p-2 gap-2">
+        <div className="w-2/3 bg-[#121212] border flex flex-col items-center p-2 gap-2">
 
         <div className="w-full flex justify-end p-2">
           <RxCross2

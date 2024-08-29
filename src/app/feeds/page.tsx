@@ -16,7 +16,8 @@ const FeedPage = () => {
 
   return (
     <div className='w-screen h-[90vh] bg-[#121212] flex justify-center'>
-        <div className="w-2/3 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden">
+        {/* <div className="w-2/3 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden"> */}
+        <div className="w-4/5 h-full border-x border-x-slate-600 py-4 overflow-scroll overflow-x-hidden">
             <div className="flex flex-col gap-4">
                 {blogs && blogs.map((blog,ind)=>{
                     return (
@@ -56,7 +57,8 @@ const FeedPage = () => {
                           </div>
                           <div className="w-1/4">
                             <img className="h-28 w-52 object-cover rounded-sm"
-                              src={blog.topicProfileImage}
+                              // src={blog.topicProfileImage}
+                              src="/landingPhoto.png"
                               loading="lazy"
                             />
                           </div>
