@@ -41,5 +41,6 @@ export async function middleware(req: NextRequest) {
 // Export middleware configuration
 export const config = {
   // matcher: ["/api/v1/blogs/create","/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
-  matcher: ["/","/api/v1/blogs/create", "/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
+  // matcher: ["/api/v1/blogs/create", "/api/v1/blogs/update/:blogId*"], // Apply this middleware to API routes, adjust as necessary
+  matcher: ["/api/v1/blogs/create/:path*"], // Apply this middleware to API routes, adjust as necessary
 };
