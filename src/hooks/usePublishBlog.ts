@@ -19,6 +19,7 @@ export function usePublishBlog(title:String,subtitle:String,topicProfileImage:St
             headers: {
               "Content-Type": "application/json",
               jwtToken: authUser.token,
+              email: authUser.username,
             },
           }
         );
