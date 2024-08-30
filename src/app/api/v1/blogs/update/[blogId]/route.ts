@@ -10,6 +10,8 @@ export async function PUT(req: NextRequest, { params }: { params: { blogId: stri
     let userId = "";
     console.log(req.headers);
     const useridHeader = req.headers.get("userid");
+    const userEmail = req.headers.get("email");
+
     if (useridHeader) {
       userId = useridHeader;
     }
@@ -22,7 +24,8 @@ export async function PUT(req: NextRequest, { params }: { params: { blogId: stri
       return NextResponse.json("Blog not found", { status: 404 });
     }
     console.log("x", blogExists.authorId, userId);
-    if (blogExists.authorId != userId) {
+    // if (blogExists.authorId != userId) {
+    if (blogExists.user.email != userEmail) {
       return NextResponse.json("You are not the author of this blog", { status: 403 });
     }
     console.log("likes in updateblog controller : ", likes);
