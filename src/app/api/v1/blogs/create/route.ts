@@ -21,25 +21,24 @@ export async function POST(req: NextRequest) {
     // const user = await prisma.user.findUnique({
     //   where: { id: userId },
     // });
-    // let user=null;
-    // if(userEmail){
-    //   user = await prisma.user.findUnique({
-    //     where: { email:userEmail },
-    //   });
-
-    // }
-    // console.log("user : ",user, " userEmail : ",userEmail);
-    // if (!user) {
-    //   return NextResponse.json("User not found", { status: 404 });
-    // }
+    let user=null;
+    if(userEmail){
+      user = await prisma.user.findUnique({
+        where: { email:userEmail },
+      });
+    }
+    console.log("user : ",user, " userEmail : ",userEmail);
+    if (!user) {
+      return NextResponse.json("User not found", { status: 404 });
+    }
 
     const post = await prisma.post.create({
       data: {
         title,
         content,
         likes: 0,
-        // authorId: user.id,
-        authorId: "3bb85932-a9ff-46bc-9c4f-b25702c6c440",
+        authorId: user.id,
+        // authorId: "3bb85932-a9ff-46bc-9c4f-b25702c6c440",
         topicProfileImage,
         subtitle,
         topicTags,
