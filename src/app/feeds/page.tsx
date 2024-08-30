@@ -57,8 +57,8 @@ const FeedPage = () => {
                           </div>
                           <div className="w-1/4">
                             <img className="h-28 w-52 object-cover rounded-sm"
-                              // src={blog.topicProfileImage}
-                              src="/landingPhoto.png"
+                              src={blog.topicProfileImage}
+                              // src="/landingPhoto.png"
                               loading="lazy"
                             />
                           </div>
