@@ -85,8 +85,8 @@ const BlogPage = ({params}:{params:{blogId:string}}) => {
         </div>
 
         <div className="">
-          {/* <img className="w-full h-[85vh] object-cover rounded-sm" src={blog.topicProfileImage} loading="lazy" /> */}
-          <img className="w-full h-[85vh] object-cover rounded-sm" src="/landingPhoto.png" loading="lazy" />
+          <img className="w-full h-[85vh] object-cover rounded-sm" src={blog.topicProfileImage} loading="lazy" />
+          {/* <img className="w-full h-[85vh] object-cover rounded-sm" src="/landingPhoto.png" loading="lazy" /> */}
         </div>
 
         <div className="flex flex-col gap-8">
