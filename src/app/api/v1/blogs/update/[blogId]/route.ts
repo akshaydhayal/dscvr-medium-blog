@@ -25,6 +25,7 @@ export async function PUT(req: NextRequest, { params }: { params: { blogId: stri
     }
     console.log("x", blogExists.authorId, userId);
     // if (blogExists.authorId != userId) {
+    //@ts-ignore
     if (blogExists.user.email != userEmail) {
       return NextResponse.json("You are not the author of this blog", { status: 403 });
     }
