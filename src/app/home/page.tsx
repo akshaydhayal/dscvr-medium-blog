@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className="w-screen h-[90vh] bg-[#121212]">
       <div className="w-full h-full flex">
-        <div className="w-2/3 flex flex-col gap-12 px-8 py-32">
+        <div className="w-2/3 flex flex-col gap-6 px-8 py-32">
           <p className="text-3xl font-serif font-bold text-center text-slate-100 leading-[2.5rem]">Discover the latest insights and trends</p>
           <p className="text-xl font-medium text-slate-300 text-center">
             Stay up-to-date with our featured blog posts and dive into the world of technology, business, and innovation.

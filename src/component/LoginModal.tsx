@@ -123,7 +123,7 @@ const LoginModal = () => {
           <div className="flex items-center h-11 w-full border border-slate-500 rounded-sm">
             {/* <FaUser className="text-white h-full w-12 p-2 px-3 bg-slate-700" /> */}
             <input
-              className="w-full h-full p-2 px-4 text-slate-500 placeholder:text-slate-700 bg-[#252424] rounded-md focus:outline-0"
+              className="w-full h-full p-2 px-4 text-slate-700 placeholder:text-slate-700 bg-[#252424] rounded-md focus:outline-0"
               type="email"
               placeholder="Enter email"
               value={email}
@@ -133,7 +133,7 @@ const LoginModal = () => {
           <div className="flex items-center h-11 w-full border border-slate-500 rounded-sm">
             {/* <FaUnlockAlt className="text-white h-full w-12 p-2 px-3 bg-slate-700" /> */}
             <input
-              className="w-full h-full p-2 px-4 text-slate-700 placeholder:text-slate-200 bg-[#252424] rounded-md focus:outline-0"
+              className="w-full h-full p-2 px-4 text-slate-700 placeholder:text-slate-700 bg-[#252424] rounded-md focus:outline-0"
               type="password"
               placeholder="Enter Password"
               value={password}
