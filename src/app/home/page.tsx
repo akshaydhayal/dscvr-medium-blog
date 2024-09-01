@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSignMethod } from "@/store/signMethodStore"; 
 import { RootState } from "@/store/store";
 import LoginModal from "@/component/LoginModal";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
   const dispatch = useDispatch();
+  const router=useRouter();
   // const signMethod = useSelector((store: RootState) => store.signMethod.value);
   // console.log("signMethod : ", signMethod);
 
@@ -22,10 +24,12 @@ const HomePage = () => {
               className="p-2 px-8 text-white border text-xl font-medium bg-sky-600
                  border-slate-600 w-max rounded-lg text-center"
               onClick={() => {
-                dispatch(toggleSignMethod("signin"));
+                router.push("/feeds");
+                // dispatch(toggleSignMethod("signin"));
               }}
             >
-              Get Started Now
+              {/* Get Started Now */}
+              Start Reading now...
             </button>
           </div>
         </div>
